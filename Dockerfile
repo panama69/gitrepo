@@ -20,6 +20,5 @@ RUN mkdir -p "$GIT_HOME" && cd "$GIT_HOME" && \
     git clone https://github.com/panama69/deleteme.git&& \
     git clone https://github.com:panama69/test.git
 
-
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
