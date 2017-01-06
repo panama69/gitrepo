@@ -17,7 +17,8 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 ENV GIT_HOME /opt/gitrepo
 RUN mkdir -p "$GIT_HOME" && cd "$GIT_HOME" && \
     git clone --mirror https://github.com/panama69/HelloWorld.git && \
-    git clone --mirror https://github.com/panama69/deleteme.git&& \
+    git clone --mirror https://github.com/panama69/deleteme.git && \
+    cd deleteme && git config --bool core.bare true && cd .. \
     git clone --mirror https://github.com/panama69/test.git
 
 EXPOSE 22
