@@ -17,8 +17,9 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 ENV GIT_HOME /opt/gitrepo
 RUN mkdir -p "$GIT_HOME" && cd "$GIT_HOME" && \
     git clone --mirror https://github.com/panama69/HelloWorld.git && \
-    git clone --mirror https://github.com/panama69/deleteme.git&& \
-    git clone --mirror https://github.com/panama69/test.git
+    git clone --mirror https://github.com/panama69/deleteme.git && \
+    git clone --mirror https://github.com/panama69/test.git && \
+    git clone --mirror https://github.hpe.com/AMSPreSales-Demos/LFT_Octane_Gherkin.git
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
